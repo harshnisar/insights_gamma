@@ -11,12 +11,14 @@ Outcomes:
 Inputs:
 {% for tag in site.data.tags %}
   {% if tag.type == 'input' %}
-  <a href="http://plus.google.com/+{{ author.google.plus }}" class="author-social" target="_blank"><i class="fa fa-fw"></i> {{ tag.name }}</a>
+  <a href="http://plus.google.com/+{{ author.google.plus }}" class="author-social" target="_blank"><i class="fa fa-fw"></i>| {{ tag.name }}</a>
   {% endif %}
 {% endfor %}
 
-<a href="http://plus.google.com/+{{ author.google.plus }}" class="author-social" target="_blank"><i class="fa fa-fw"></i><b>Summary</b></a> 
-<a href="http://plus.google.com/+{{ author.google.plus }}" class="author-social" target="_blank"><i class="fa fa-fw"></i><b>Methodology</b></a>
+<!--<a href="http://plus.google.com/+{{ author.google.plus }}" class="author-social" target="_blank"><i class="fa fa-fw"></i><b>Summary</b></a> -->
+<!--<a href="http://plus.google.com/+{{ author.google.plus }}" class="author-social" target="_blank"><i class="fa fa-fw"></i><b>Methodology</b></a>-->
+<b>Summary</b><br>
+<b>Methodology</b><br>
 
 
 
