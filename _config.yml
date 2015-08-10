@@ -1,0 +1,47 @@
+# Site wide configuration
+
+title:            Machine Learning - India
+locale:           en_US
+url:              //harshnisar.github.io/ml-india 
+
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+
+# Site owner
+owner:
+  name: ML-India
+  avatar: bio-photo.jpg
+  bio: "Fostering the machine learning and data ecosystem in India"
+  disqus-shortname: ml-india
+  twitter: ml_india
+  facebook: 
+  google:
+    plus: 
+    analytics: UA-65998211-1
+    verify: 
+    ad-client:
+    ad-slot:
+  bing-verify: D81F4C18A6CB3018F64D7C827D953DFD
+  github: harshnisar/ml-india
+  instagram:
+  email: nisar.harsh@gmail.com
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
