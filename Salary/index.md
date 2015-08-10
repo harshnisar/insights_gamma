@@ -13,7 +13,7 @@ tags: Salary
   {% for post in site.posts %}
   {% if post.tags contains page.tags %}
         
-  <article class="post">
+  <article>
   <div class="headline-wrap">
   {% if post.link %}
   <h1><a href="{{ post.link }}">{{ post.title }}</a></h1>
