@@ -43,9 +43,10 @@
       {% else %}
         <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
         <figure>
-          <img src="{{ post.image }}">
+          <img src="{{ post.plot }}">
         </figure>
-        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <p>{{ post.excerpt | strip_html | truncate: 700 }}...</p>
+        
       {% endif %}
     </article>
     {% endfor %}
