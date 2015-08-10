@@ -2,7 +2,7 @@
 layout: post
 title: "The triangle hypohesis. Return on skills"
 excerpt: "The triangle hypothesis: As sklls increase, salary increases exponentially. People with higher skill may still have lower salary. However people with a score lesser than a threshold, do not get salary above a point"
-tags: [skill, salary]
+tags: [Skill, Salary]
 comments: true
 plot: 123.png
 ---
