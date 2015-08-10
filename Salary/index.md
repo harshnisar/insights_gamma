@@ -30,26 +30,3 @@ tags: Salary
   {% endfor %}
 </div>
 
-<div id="index">
-    {% for post in site.posts %}
-    {% if post.tags contains page.tags %}
-    {% unless post.next %}
-      <h3>{{ post.date | date: '%Y' }}</h3>
-      {% else %}
-        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-        {% if year != nyear %}
-          <h3>{{ post.date | date: '%Y' }}</h3>
-        {% endif %}
-      {% endunless %}
-      <article>
-        {% if post.link %}
-          <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
-        {% else %}
-          <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-          <p>{{ post.exerpt | strip_html | truncate: 700 }}</p>
-        {% endif %}
-      </article>
-     {% endif %}  
-    {% endfor %}
-  </div><!-- /#index -->
