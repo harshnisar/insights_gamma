@@ -13,18 +13,22 @@ tags: Salary
   {% for post in site.posts %}
   {% if post.tags contains page.tags %}
         
-  <div class="post">
-  <h1 class="post-title">
-  <a name="{{ post.title }}"></a>
-  <a href="{{ site.url }}{{ post.url }}">
-  {{ post.title }}
-  </a>
-  </h1>
-
-  <span class="post-date">{{ post.date | date_to_string }}</span>
-
+  <article class="post">
+  <div class="headline-wrap">
+  {% if post.link %}
+  <h1><a href="{{ post.link }}">{{ post.title }}</a></h1>
+  {% else %}
+  <h1><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h1>
+  {% endif %}
+  </div><!--/ .headline-wrap -->
+  <div class="article-wrap">
   {{ post.content }}
-  </div>
+  <hr />
+  <footer role="contentinfo">
+  {% if page.share != false %}{% include _social-share.html %}{% endif %}
+  <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
+  </footer>
+  </div><!-- /.article-wrap -->
   
   {% endif %}
   {% endfor %}
