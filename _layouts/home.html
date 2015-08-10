@@ -45,7 +45,9 @@
         <figure>
           <img src="{{ site.url }}/images/{{ post.plot }}">
         </figure>
-        <p>{{ post.excerpt | strip_html | truncate: 700 }} ... <a href="{{ site.url }}{{ post.url }}">read more</p></a></p>
+        <p>{{ post.excerpt | strip_html | truncate: 700 }} ... 
+        <br>
+        <a href="{{ site.url }}{{ post.url }}">Read more about this insight</p></a></p>
         
       {% endif %}
     </article>
