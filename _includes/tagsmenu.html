@@ -4,7 +4,7 @@ Insights by:
 Outcomes:
 {% for tag in site.data.tags %}
   {% if tag.type == 'output' %}
-    <li> {{ tag.name }} </li>
+    <li> <a href="http://plus.google.com/+{{ author.google.plus }}" class="author-social" target="_blank"><i class="fa fa-fw"></i> {{ tag.name }}</a> </li>
   {% endif %}
 {% endfor %}
 </ul>
@@ -21,5 +21,7 @@ Inputs:
     <li> Summary </li>
     <li> Method </li>
 </ul>
+
+
 
 
