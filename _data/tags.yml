@@ -1,0 +1,20 @@
+- name: "Gender"
+  type: input
+
+- name: "Skill"
+  type: input
+
+- name: "Demographic"
+  type: input
+
+- name: "Field"
+  type: input
+
+- name: "designation"
+  type: output
+
+- name: "Location"
+  type: output
+
+- name: "Salary"
+  type: output

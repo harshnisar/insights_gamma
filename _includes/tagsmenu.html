@@ -1,0 +1,25 @@
+
+Insights by:
+<ul>
+Outcomes:
+{% for tag in site.data.tags %}
+  {% if tag.type == 'output' %}
+    <li> {{ tag.name }} </li>
+  {% endif %}
+{% endfor %}
+</ul>
+<ul>
+Inputs:
+{% for tag in site.data.tags %}
+  {% if tag.type == 'input' %}
+    <li> {{ tag.name }} </li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+<ul>
+    <li> Summary </li>
+    <li> Method </li>
+</ul>
+
+
