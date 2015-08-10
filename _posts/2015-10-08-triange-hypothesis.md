@@ -7,7 +7,7 @@ comments: true
 plot: 123.png
 ---
 
-{{ site.url }}/images/plot
+{{ site.url }}/images/{{ page.plot }}
 <figure>
     <img src="http://harshnisar.github.io/insights_gamma/images/123.png">
 </figure>
