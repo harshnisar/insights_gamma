@@ -2,7 +2,7 @@
 
 title:            Machine Learning - India
 locale:           en_US
-url:              //harshnisar.github.io/ml-india 
+url:              //harshnisar.github.io/insights_gamma 
 
 
 # Jekyll configuration
@@ -26,9 +26,9 @@ kramdown:
 
 # Site owner
 owner:
-  name: ML-India
+  name: Insights
   avatar: bio-photo.jpg
-  bio: "Fostering the machine learning and data ecosystem in India"
+  bio: "Insights into the Indian labour market"
   disqus-shortname: ml-india
   twitter: ml_india
   facebook: 
@@ -39,7 +39,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify: D81F4C18A6CB3018F64D7C827D953DFD
-  github: harshnisar/ml-india
+  github: harshnisar/insights_gamma
   instagram:
   email: nisar.harsh@gmail.com
 
