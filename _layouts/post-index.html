@@ -49,19 +49,15 @@
         {% if post.link %}
           <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
         <div markdown="1">
-        My text with **markdown** syntax
+My text with **markdown** syntax
         </div>
-       {% markdown %}
-  *hi*
-        {% endmarkdown  %}
+
         {% else %}
           <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
         <div markdown="1">
-  My text with **markdown** syntax
+My text with **markdown** syntax
         </div>
-        {% markdown %}
-  *hi*
-        {% endmarkdown  %}
+
           <p>{{ post.content }}</p>
         {% endif %}
       </article>
