@@ -6,9 +6,8 @@ tags: [Skill, Salary]
 comments: true
 plot: 123.png
 ---
-
-{{ page.link }}
-{{ page.url }}
+{% include _toc.html %}
+##{{ page.title }}
 
 <figure>
     <img src=" {{ site.url }}/images/{{ page.plot }} ">
