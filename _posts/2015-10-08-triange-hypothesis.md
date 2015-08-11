@@ -7,7 +7,8 @@ comments: true
 plot: 123.png
 ---
 {% include _toc.html %}
-##{{ page.title }}
+
+## {{ page.title }}
 
 <figure>
     <img src=" {{ site.url }}/images/{{ page.plot }} ">
