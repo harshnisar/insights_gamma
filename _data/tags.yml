@@ -10,7 +10,7 @@
 - name: "Field"
   type: input
 
-- name: "designation"
+- name: "Designation"
   type: output
 
 - name: "Location"

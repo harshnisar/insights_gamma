@@ -7,9 +7,28 @@
 {% include _head.html %}
 </head>
 
-<body class="home">
+<body class="post-index">
 
 {% include _browser-upgrade.html %}
+
+
+<section id="table-of-contents" class="toc">
+  <header>
+    <h3><i class="fa fa-book"></i> Overview</h3>
+  </header>
+<div id="drawer">
+{% for post in site.posts %}
+{% if post.tags contains page.tags %}
+<ul id="markdown-toc">
+<li><a href="{{ site.url }}{{ page.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+</ul>
+{% endif %}
+{% endfor %}
+</div>
+</section><!-- /#table-of-contents -->
+
+
+
 
 {% include _navigation.html %}
 
@@ -29,29 +48,33 @@
 {% endif %}
 
 <div id="main" role="main">
+
+
+
+  
+  
+  
   <div class="article-author-side">
     {% include _author-bio.html %}
   </div>
   <div id="index">
+    <h1>{{ page.title }}</h1>
+    {% for post in site.posts %}
+    {% if post.tags contains page.tags %}
+
     
-    
-    <h3><a href="{{ site.url}}/posts/">Insights</a></h3>
-    {% for post in site.posts limit:1 %}
-    <article>
-      {% if post.link %}
-        <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
-      {% else %}
-        <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-        <figure>
-          <img src="{{ site.url }}/images/{{ post.plot }}">
-        </figure>
-        <p>{{ post.excerpt | strip_html | truncate: 700 }} ... 
-        <br>
-        <br>
-        <a target="_blank" href="{{ site.url }}{{ post.url }}">Read more about this insight</p></a></p>
-        
-      {% endif %}
-    </article>
+      <article>
+        {% if post.link %}
+          <h1 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h1>
+        {% else %}
+          <h1><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+          <p>{{ post.content | truncate : 500 }} </p>
+          <a href="{{ site.url }}{{ post.url }}">Read more about this insight.</p></a></p>
+
+        {% endif %}
+      </article>
+      <hr/>
+    {% endif %}
     {% endfor %}
   </div><!-- /#index -->
 </div><!-- /#main -->
