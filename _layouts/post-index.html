@@ -16,7 +16,9 @@
     <h3>Overview</h3>
   </header>
 <div id="drawer">
-<a href="{{ site.url }}{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+{% for post in site.posts %}
+<a href="{{ site.url }}{{ page.url }}" title="{{ page.title }}"><h4>{{ page.title }}</h4></a>
+{% endfor %}
 </div>
 </section><!-- /#table-of-contents -->
 
