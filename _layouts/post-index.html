@@ -48,10 +48,12 @@
       <article>
         {% if post.link %}
           <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
-  [##{{post.title}}]({{ site.url }}{{ post.url }})  
+        <div markdown="1">
+        My text with **markdown** syntax
+        </div>
         {% else %}
           <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-  [##{{post.title}}]({{ site.url }}{{ post.url }})  
+  
           <p>{{ post.content }}</p>
         {% endif %}
       </article>
