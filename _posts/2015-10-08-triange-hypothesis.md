@@ -6,7 +6,6 @@ tags: [Skill, Salary]
 comments: true
 plot: 123.png
 ---
-{% include _toc.html %}
 
 ## {{ page.title }}
 
