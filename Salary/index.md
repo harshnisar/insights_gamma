@@ -14,7 +14,7 @@ tags: Salary
   {% if post.tags contains page.tags %}
         
   
-  {{ post.content }}
+  {{ post.content | strip_html }}
 
   {% endif %}
   {% endfor %}
