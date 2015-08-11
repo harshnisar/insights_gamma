@@ -53,7 +53,9 @@
         </div>
         {% else %}
           <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-  
+        <div markdown="1">
+        My text with **markdown** syntax
+        </div>
           <p>{{ post.content }}</p>
         {% endif %}
       </article>
