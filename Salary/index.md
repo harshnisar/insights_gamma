@@ -6,19 +6,3 @@ excerpt: "University groups working on machine learning, stats and data"
 comments: true
 tags: Salary
 ---
-
-{% include _toc.html %}
-
-
-  {% for post in site.posts %}
-  {% if post.tags contains page.tags %}
-        
-  
-  {{ post.content }}
-
-  {% endif %}
-  {% endfor %}
-  
-
-  
-
