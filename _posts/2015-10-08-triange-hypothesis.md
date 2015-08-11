@@ -7,6 +7,8 @@ comments: true
 plot: 123.png
 ---
 
+{{ page.link }}
+{{ page.url }}
 
 <figure>
     <img src=" {{ site.url }}/images/{{ page.plot }} ">
