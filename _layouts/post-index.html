@@ -19,7 +19,7 @@
 <div id="drawer">
 {% for post in site.posts %}
 <ul id="markdown-toc">
-<li><a href="{{ site.url }}{{ page.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+<li><a href="#{{ post.title }}" title="{{ post.title }}">{{ post.title }}</a></li>
 </ul>
 {% endfor %}
 </div>
@@ -60,6 +60,7 @@
     {% for post in site.posts %}
     
       <article>
+      <a name="{{ post.title }}"></a>
         {% if post.link %}
           <h1 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h1>
         {% else %}
