@@ -17,9 +17,10 @@
     <h3><i class="fa fa-book"></i> Overview</h3>
   </header>
 <div id="drawer">
+<ul id="markdown-toc">
+<li><a style='background:#000000; opacity:1.0;'><b> &#65513; Back </b></a></li>
 {% for post in site.posts %}
 {% if post.tags contains page.tags %}
-<ul id="markdown-toc">
 <li><a href="#{{ post.title }}" title="{{ post.title }}">{{ post.title }}</a></li>
 </ul>
 {% endif %}
