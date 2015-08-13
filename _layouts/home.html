@@ -71,8 +71,21 @@ This is homepage.  Will be using tags.yml -->
     {% include _author-bio.html %}
   </div>
   <div id="index">
-    
-    
+      
+
+  <div class="slider1">
+  {% for tag in site.data.tags %}
+  <div class="slide">{{ tag.name }}
+  <a href="{{ site.url }}/cat/{{ tag.name }}"><img src="http://placehold.it/350x150&text=FooBar1"></a>
+  </div>
+  {% endfor %}
+
+  </div>
+
+
+
+
+
     <h3><a href="{{ site.url}}/posts/">Insights</a></h3>
     {% for post in site.posts limit:1 %}
     <article>
