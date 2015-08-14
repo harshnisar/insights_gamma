@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.js"></script>
+<link rel="stylesheet" type="text/css" href="element.css">
+</head>
+
+<body>
+
+<div class="button-group filters-button-group">
+  <button class="button is-checked" data-filter="*">Show all</button>
+  <button class="button" data-filter=".salary">Salary</button>
+  <button class="button" data-filter=".designation">Designation</button>
+  <button class="button" data-filter=".location">Location</button>
+  <button class="button" data-filter=".demo">Demo</button>
+  <button class="button" data-filter=".field">Field</button>
+</div>
+
+
+
+<div class="grid">
+  <div class="grid-item salary"> Salary</div>
+  <div class="grid-item salary"> Salary</div>
+  <div class="grid-item designation">Designation</div>
+  <div class="grid-item designation">Designation</div>
+  <div class="grid-item location">Location</div>
+  <div class="grid-item location">Location</div>
+  <div class="grid-item demo">demo</div>
+  <div class="grid-item field">field</div>
+  <div class="grid-item demo">demo</div>
+  <div class="grid-item field">field</div>
+</div>
+
+</body>
+
+<script>
+
+// external js: isotope.pkgd.js
+
+
+$( function() {
+  // init Isotope
+  var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    layoutMode: 'fitRows'
+  });
+  // filter functions
+  var filterFns = {
+    // show if number is greater than 50
+    numberGreaterThan50: function() {
+      var number = $(this).find('.number').text();
+      return parseInt( number, 10 ) > 50;
+    },
+    // show if name ends with -ium
+    ium: function() {
+      var name = $(this).find('.name').text();
+      return name.match( /ium$/ );
+    }
+  };
+  // bind filter button click
+  $('.filters-button-group').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $grid.isotope({ filter: filterValue });
+  });
+  // change is-checked class on buttons
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $( this ).addClass('is-checked');
+    });
+  });
+  
+}); 
+
+
+
+
+</script
+
+
+
+
+</html>
