@@ -7,6 +7,7 @@
 <head>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.js"></script>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="element.css">
 </head>
 
@@ -23,7 +24,12 @@
 
 <div class="grid">
 {% for post in site.posts %}
-  <div class="grid-item {{ post.tags | join: " " }}"> {{ post.title }}</div>
+  <div class="grid-item {{ post.tags | join: " " }}">
+  <div class="imgWrap">
+  <img class ="plot" src="{{ site.url }}/images/{{ post.plot }}" alt="polaroid" />
+  <a href="{{site.url}}/{{ post.url }}"><p class="imgDescription">{{ post.excerpt | strip_html }}</p></a>
+  </div>
+  </div>
 {% endfor %}
 </div>
 </body>
