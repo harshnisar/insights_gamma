@@ -96,7 +96,7 @@ body {
 
 .field
 
-width:200px; height:auto;
+
 
 .imgWrap {
   position: relative;
@@ -138,4 +138,53 @@ width:200px; height:auto;
 .imgWrap:hover .imgDescription {
   visibility: visible;
   opacity: 1;
+}
+
+
+.imgTitle {
+  font-family: 'PT Sans Narrow', sans-serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(27, 28, 29, 0.72);
+  color: #fff;
+  margin-bottom: 5%;
+  margin-top: 80%;
+  display: block;
+
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+}
+
+
+p{
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+
+.back {
+  font-family: 'PT Sans Narrow', sans-serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(27, 28, 29, 0.72);
+  color: #fff;
+  margin-top: 10%;
+  margin-bottom: 10%;
+
+
+  display: none;
+  
+
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
 }
