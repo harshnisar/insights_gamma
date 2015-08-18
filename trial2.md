@@ -5,6 +5,7 @@
 <html>
 
 <head>
+{% include _head.html %}
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.js"></script>
@@ -13,6 +14,8 @@
 </head>
 <body>
 
+{% include _navigation.html %}
+<center>
 <div class="button-group filters-button-group">
   <button class="button is-checked" data-filter="*">Show all</button>
   <button class="button" data-filter=".salary">Salary</button>
@@ -21,7 +24,7 @@
   <button class="button" data-filter=".demo">Demo</button>
   <button class="button" data-filter=".field">Field</button>
 </div>
-
+</center>
 
 <div class="grid">
 {% for post in site.posts %}
