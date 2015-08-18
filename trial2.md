@@ -37,7 +37,7 @@
    </div>
 
    <div class="back" id="back">
-   <a style="text-decoration:none;" href="{{site.url}}/{{ post.url }}"><p>{{ post.excerpt | strip_html }}</p></a>
+   <a style="text-decoration:none;" href="{{site.url}}/{{ post.url }}"><p>{{ post.excerpt | strip_html }} <br> Read more</p></a>
    </div>
    
    </div>
