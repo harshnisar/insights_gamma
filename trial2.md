@@ -91,7 +91,7 @@ $( function() {
 <script>
 
 $(".front>a").click(function(){
-    alert("hmm");
+    // alert("hmm");
     $(this).siblings("#imgtitle").toggle();
     $(this).siblings("#back").toggle();
 
@@ -99,7 +99,7 @@ $(".front>a").click(function(){
 });
 
 $(".imgTitle>a").click(function(){
-    alert("hmm2");
+    // alert("hmm2");
     $(this).parent().toggle();
     $(this).parent().siblings("#back").toggle();
 
