@@ -32,7 +32,7 @@
 
 <!-- This is for the main table of contents, categories of tags.
 This is homepage.  Will be using tags.yml -->
-<section id="table-of-contents" class="toc">
+<!-- <section id="table-of-contents" class="toc">
   <header>
     <h3><i class="fa fa-book" style="opacity:1.0;"></i>Categories</h3>
   </header>
@@ -62,7 +62,7 @@ This is homepage.  Will be using tags.yml -->
 
 </div>
 </section>
-
+ -->
 
 
 
@@ -73,7 +73,7 @@ This is homepage.  Will be using tags.yml -->
   <div id="index">
       
 
-  <div class="slider1">
+<!--   <div class="slider1">
   {% for tag in site.data.tags %}
   <div class="slide">{{ tag.name }}
   <a href="{{ site.url }}/cat/{{ tag.name }}"><img src="http://placehold.it/350x150&text=FooBar1"></a>
@@ -81,18 +81,18 @@ This is homepage.  Will be using tags.yml -->
   {% endfor %}
 
   </div>
+ -->  
 
+    {% include _introduction.html %}
 
-
-
-
-    <h3><a href="{{ site.url}}/posts/">Insights</a></h3>
+    <!-- <h3><a href="{{ site.url}}/posts/">Insights</a></h3> -->
     {% for post in site.posts limit:1 %}
     <article>
       {% if post.link %}
-        <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
+        <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h3>
       {% else %}
-        <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+        <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+        <div style="font-size:80%; font-style:italic;">Published on: <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>{% if post.modified %} and last modified on <time datetime="{{ post.modified | date: "%Y-%m-%d" }}">{{ post.modified | date: "%B %d, %Y" }}</time>{% endif %}.</div>
         <figure>
           <img src="{{ site.url }}/images/{{ post.plot }}">
         </figure>
@@ -100,6 +100,7 @@ This is homepage.  Will be using tags.yml -->
         <br>
         <br>
         <a target="_blank" href="{{ site.url }}{{ post.url }}">Read more about this insight</p></a></p>
+        <a target="_blank" href="/trial2"> To check all <b><i>Insights</i></b> till now click here</a>
         
       {% endif %}
     </article>
