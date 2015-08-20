@@ -4,7 +4,7 @@ title: "Software professionals- Core v/s Circuit branches"
 excerpt: "The triangle hypothesis: As sklls increase, salary increases exponentially. People with higher skill may still have lower salary. However people with a score lesser than a threshold, do not get salary above a point"
 tags: [Field, Designation, Location]
 comments: true
-plot: 456.png
+plot: 890.png
 ---
 
 
