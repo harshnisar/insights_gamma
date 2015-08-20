@@ -1,0 +1,200 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include _head.html %}
+
+<style>
+#contain {
+    background-color:#FFF;
+    height:100%;/* no need  */
+    margin:0;
+    padding:0;
+    text-align:center;
+    display: inline-block;
+}
+
+#plot {
+    padding:0;
+    margin:0;
+    width:60%;
+    min-width:350px;   
+    vertical-align:bottom;
+    float: left;
+}
+#para {
+    width:39%;
+    min-width:350px;
+    display:inline-block;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    color:black;
+    text-align: justify;
+    vertical-align: top;
+}
+
+</style>
+</head>
+
+<body class="home">
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+{% if page.image.feature %}
+  <div class="image-wrap">
+  <img src=
+    {% if page.image.feature contains 'http' %}
+      "{{ page.image.feature }}"
+    {% else %}
+      "{{ site.url }}/images/{{ page.image.feature }}"
+    {% endif %}
+  alt="{{ page.title }} feature image">
+  {% if page.image.credit %}
+    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  {% endif %}
+  </div><!-- /.image-wrap -->
+{% endif %}
+
+
+
+<!-- This is for the main table of contents, categories of tags.
+This is homepage.  Will be using tags.yml -->
+<!-- <section id="table-of-contents" class="toc">
+  <header>
+    <h3><i class="fa fa-book" style="opacity:1.0;"></i>Categories</h3>
+  </header>
+<div id="drawer">
+<ul id="markdown-toc">
+  <li><a style='background:#000000; opacity:1.0;'><b>Outcomes: </b></a>
+  <ul>
+    {% for tag in site.data.tags %}
+     {% if tag.type == 'output' %}
+      <a href="{{ site.url }}/cat/{{ tag.name }}"><li> {{ tag.name }}</li></a>
+     {% endif %}
+    {% endfor %}
+   </ul>
+  </li> 
+  
+  <li><a style='background:#000000; opacity:1.0;'><b>Inputs: </b></a>
+  <ul>
+    {% for tag in site.data.tags %}
+     {% if tag.type == 'input' %}
+      <a href="{{ site.url }}/cat/{{ tag.name }}"><li> {{ tag.name }}</li></a>
+     {% endif %}
+    {% endfor %}
+    
+  </ul>
+  </li>
+</ul>
+
+</div>
+</section>
+ -->
+
+
+
+<div id="main" role="main" style="margin-top:1em;">
+  <div class="article-author-side" style="border-right: 1px solid #D5CDCD; display: none;">
+    {% include _author-bio.html %}
+  </div>
+  <div id="index" style="width:90%; margin-left:5%; margin-top:">
+      
+
+<!--   <div class="slider1">
+  {% for tag in site.data.tags %}
+  <div class="slide">{{ tag.name }}
+  <a href="{{ site.url }}/cat/{{ tag.name }}"><img src="http://placehold.it/350x150&text=FooBar1"></a>
+  </div>
+  {% endfor %}
+
+  </div>
+ -->  
+
+    {% include _introduction.html %}
+
+    <!-- <h3><a href="{{ site.url}}/posts/">Insights</a></h3> -->
+    {% for post in site.posts limit:1 %}
+    <article>
+<!--       {% if post.link %}
+        <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h3>
+      {% else %}
+        <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+        <div style="font-size:80%; font-style:italic;">Published on: <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>{% if post.modified %} and last modified on <time datetime="{{ post.modified | date: "%Y-%m-%d" }}">{{ post.modified | date: "%B %d, %Y" }}</time>{% endif %}.</div> -->
+        <br>
+        <div id="contain">
+        <div id="plot">
+        <figure>
+          <img src="{{ site.url }}/images/{{ post.plot }}" height="550px" width="550px">
+        </figure>
+        </div><div id="para">
+
+
+        <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+        <div style="font-size:80%; font-style:italic;">Published on: <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>{% if post.modified %} and last modified on <time datetime="{{ post.modified | date: "%Y-%m-%d" }}">{{ post.modified | date: "%B %d, %Y" }}</time>{% endif %}.</div>
+        <br>
+
+        <p>{{ post.content | strip_html}}
+        <br>
+
+        <br>
+        <a target="_blank" href="{{ site.url }}{{ post.url }}">Read more about this insight</p></a></p>
+        <a target="_blank" href="{{ site.url }}/trial2"> To check all <b><i>Insights</i></b> till now click here</a>
+
+        <div class="social-share">
+            <h4>Share on</h4>
+            <ul>
+              <li>
+                <a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ post.url }}" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/share?url={{ site.url }}{{ post.url }}" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+              </li>
+            </ul>
+          </div><!-- /.social-share -->
+
+
+
+
+        </div>
+        </div><!-- contain div ending -->
+
+                          <!-- <div class="social-share">
+            <h4>Share on</h4>
+            <ul>
+              <li>
+                <a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ post.url }}" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/share?url={{ site.url }}{{ post.url }}" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+              </li>
+            </ul>
+          </div><!-- /.social-share -->
+ 
+
+      <!-- {% endif %} -->
+    </article>
+    {% endfor %}
+  </div><!-- /#index -->
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}
+
+
+</body>
+</html>
