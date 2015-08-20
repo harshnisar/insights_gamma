@@ -70,7 +70,7 @@ This is homepage.  Will be using tags.yml -->
   <div class="article-author-side" style="border-right: 1px solid #D5CDCD;">
     {% include _author-bio.html %}
   </div>
-  <div id="index">
+  <div id="index" style="width:65%">
       
 
 <!--   <div class="slider1">
@@ -94,10 +94,12 @@ This is homepage.  Will be using tags.yml -->
         <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
         <div style="font-size:80%; font-style:italic;">Published on: <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>{% if post.modified %} and last modified on <time datetime="{{ post.modified | date: "%Y-%m-%d" }}">{{ post.modified | date: "%B %d, %Y" }}</time>{% endif %}.</div>
         <br>
+        {{ post.excerpt }}
+        <br><br>
         <figure>
-          <img src="{{ site.url }}/images/{{ post.plot }}">
+          <img src="{{ site.url }}/images/{{ post.plot }}" width="600px">
         </figure>
-        <p>{{ post.excerpt | strip_html }}
+        <p>{{ post.content | strip_html }}
         <br>
         <br>
         <a target="_blank" href="{{ site.url }}{{ post.url }}">Read more about this insight</p></a></p>

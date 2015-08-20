@@ -19,13 +19,13 @@
 #plot {
     padding:0;
     margin:0;
-    width:49%;
+    width:60%;
     min-width:350px;   
     vertical-align:bottom;
     float: left;
 }
 #para {
-    width:49%;
+    width:39%;
     min-width:350px;
     display:inline-block;
     -moz-box-sizing:border-box;
@@ -98,10 +98,10 @@ This is homepage.  Will be using tags.yml -->
 
 
 <div id="main" role="main">
-  <div class="article-author-side" style="border-right: 1px solid #D5CDCD;">
+  <div class="article-author-side" style="border-right: 1px solid #D5CDCD; display: none;">
     {% include _author-bio.html %}
   </div>
-  <div id="index" style="width:90%; margin:0">
+  <div id="index" style="width:90%; margin-left:5%;">
       
 
 <!--   <div class="slider1">
@@ -131,7 +131,7 @@ This is homepage.  Will be using tags.yml -->
           <img src="{{ site.url }}/images/{{ post.plot }}">
         </figure>
         </div><div id="para">
-        <p>{{ post.excerpt | strip_html}}
+        <p>{{ post.content | strip_html}}
         <br>
 
         <br>
