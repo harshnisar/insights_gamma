@@ -1,0 +1,30 @@
+<center>
+<h2> All Insights </h2>
+<div class="button-group filters-button-group">
+  <button class="button is-checked" data-filter="*">Show all</button>
+  <button class="button" data-filter=".Salary">Salary</button>
+  <button class="button" data-filter=".Designation">Designation</button>
+  <button class="button" data-filter=".Location">Location</button>
+  <button class="button" data-filter=".Demo">Demo</button>
+  <button class="button" data-filter=".Field">Field</button>
+</div>
+</center>
+
+<div class="grid">
+{% for post in site.posts %}
+  <div class="grid-item {{ post.tags | join: " " }}">
+   <div id="front" class="front">
+   <a class="alink"><img class="plot" src="{{ site.url }}/images/{{ post.plot }}" alt="polaroid" /></a>
+   
+   <div class="imgTitle" id="imgtitle">
+   <a class="alink"><p>{{ post.title | strip_html }}</p></a>
+   </div>
+
+   <div class="back" id="back">
+   <a style="text-decoration:none;" href="{{site.url}}/{{ post.url }}"><p>{{ post.excerpt | strip_html }} <br> Read more</p></a>
+   </div>
+   
+   </div>
+   </div>
+  {% endfor %}
+</div>

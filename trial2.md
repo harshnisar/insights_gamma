@@ -109,7 +109,7 @@ $(".imgTitle>a").click(function(){
     
 });
 
-</script
+</script>
 
 
 </html>
