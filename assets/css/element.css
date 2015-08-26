@@ -55,7 +55,7 @@
 .insightgrid .button:hover {
   background-color: #trasparent;
   text-decoration: underline;
-  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  /*text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);*/
   color: #000;
 }
 
