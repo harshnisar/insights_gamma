@@ -204,7 +204,8 @@
 
 <div class="footer-wrap">
   {% if site.related_posts.size > 0 %}
-  <div class="related-articles" display="None">
+  
+  <div class="related-articles" style="display:none;">
   <h4>Recent Insights <small class="pull-right">(<a href="{{ site.url }}/posts/">View all posts</a>)</small></h4>
     <ul>
     {% for post in site.related_posts limit:3 %}
@@ -214,9 +215,15 @@
     <hr />
   </div><!-- /.related-articles -->
   {% endif %}
-  <footer>
+  
+
+  {% include _disqus_comments.html %}  
+
+
+  <footer style="text-align:center;">
     {% include _footer.html %}
   </footer>
+  
 </div><!-- /.footer-wrap -->
 
 </div> <!-- section ends here -->
