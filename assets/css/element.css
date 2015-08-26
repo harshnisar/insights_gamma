@@ -15,10 +15,10 @@
 
   vertical-align: middle;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 8px;
   font-weight: bolder;
-  font-style: inherit;
-  font-size: 22px;
+  font-family: 'PT Sans Narrow';
+  font-size: 25px;
   display:none;
 }
 
@@ -26,10 +26,10 @@
     float: left;
     vertical-align: middle;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 8px;
     font-weight: bolder;
-    font-style: inherit;
-    font-size: 22px;
+    font-family: 'PT Sans Narrow';
+    font-size: 25px;
  }
 
 
@@ -68,6 +68,7 @@
   color: black;
   font-style: bolder;
   text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+  text-decoration: none;
 }
 
 .insightgrid .button:active {
@@ -199,6 +200,9 @@
   font-family: 'PT Sans Narrow', sans-serif;
   text-decoration: none;
   color: #ffffff;
+  font-size: 17px;
+  padding:5px;
+
 }
 
 
