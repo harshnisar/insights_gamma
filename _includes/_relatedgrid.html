@@ -1,23 +1,40 @@
 <center>
-<h2> Related Insights </h2>
-<div class="button-group filters-button-group">
-  <button class="button is-checked" data-filter=".Related">Related</button>
-  <button class="button" data-filter="*">Show all</button>
+<h2 class="topgridheader"> Related Insights </h2>
+<div class="button-group filters-button-group" style="max-width:1150px">
+  <span class="inlinegridheader"> Related Insights </span>
   <button class="button" data-filter=".Salary">Salary</button>
   <button class="button" data-filter=".Designation">Designation</button>
   <button class="button" data-filter=".Location">Location</button>
   <button class="button" data-filter=".Demo">Demo</button>
   <button class="button" data-filter=".Field">Field</button>
+  <button class="button" data-filter="*">Show all</button>
+  <button class="button is-checked" data-filter=".Related">Related</button>
 </div>
 </center>
 
 <div class="grid">
 {% for post in site.posts %}
-  {% if site.related_posts | limit:5 contains post %}
-  <div class="grid-item Related {{ post.tags | join: " " }}">
-  {% else %}
-  <div class="grid-item {{ post.tags | join: " " }}">
-  {% endif %} 
+  
+  {% assign sameTagCount = 0 %}
+  {% assign commonTags = '' %}
+
+  {% for tag in post.tags %}
+            {% if page.tags contains tag %}
+
+              {% assign sameTagCount = sameTagCount | plus: 1 %}
+              {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+              {% assign commonTags = commonTags | append: tagmarkup %}
+
+            {% endif %}
+  {% endfor %}
+
+  {% if sameTagCount >= 1 %}
+    <div class="grid-item Related {{ post.tags | join: " " }}">
+  {% else %}      
+    <div class="grid-item {{ post.tags | join: " " }}">
+  {% endif %}
+
+
    <div id="front" class="front">
    <a class="alink"><img class="plot" src="{{ site.url }}/images/{{ post.plot }}" alt="polaroid" /></a>
    
@@ -26,7 +43,7 @@
    </div>
 
    <div class="back" id="back">
-   <a style="text-decoration:none;" href="{{site.url}}/{{ post.url }}"><p>{{ post.excerpt | strip_html }} <br> Read more</p></a>
+   <a style="text-decoration:none;" href="{{site.url}}/{{ post.url }}"><p>{{ post.excerpt | strip_html }} <br><br><span style="text-align:center;"> Read more </span></p></a>
    </div>
    
    </div>

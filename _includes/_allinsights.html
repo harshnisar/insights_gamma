@@ -1,12 +1,13 @@
 <center>
-<h2> All Insights </h2>
-<div class="button-group filters-button-group">
-  <button class="button is-checked" data-filter="*">Show all</button>
+  <h2 class="topgridheader"> All Insights </h2>
+<div class="button-group filters-button-group" style="max-width:1150px">
+  <span class="inlinegridheader"> All Insights </span>
   <button class="button" data-filter=".Salary">Salary</button>
   <button class="button" data-filter=".Designation">Designation</button>
   <button class="button" data-filter=".Location">Location</button>
   <button class="button" data-filter=".Demo">Demo</button>
   <button class="button" data-filter=".Field">Field</button>
+  <button class="button is-checked" data-filter="*">Show all</button>
 </div>
 </center>
 
@@ -21,7 +22,7 @@
    </div>
 
    <div class="back" id="back">
-   <a style="text-decoration:none;" href="{{site.url}}/{{ post.url }}"><p>{{ post.excerpt | strip_html }} <br> Read more</p></a>
+   <a style="text-decoration:none;" href="{{site.url}}/{{ post.url }}"><p>{{ post.excerpt | strip_html }} <br><br><span style="text-align:center;"> Read more</span></p></a>
    </div>
    
    </div>

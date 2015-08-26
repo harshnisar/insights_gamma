@@ -5,9 +5,101 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 {% include _head.html %}
+
+<style>
+#contain {
+    background-color:#FFF;
+    height:100%;/* no need  */
+    margin:0;
+    padding:0;
+    text-align:center;
+    display: inline-block;
+}
+
+#plot {
+    padding:0;
+    margin:0;
+    width:60%;
+    min-width:350px;   
+    vertical-align:bottom;
+    float: left;
+}
+#para {
+    width:39%;
+    min-width:350px;
+    display:inline-block;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    color:black;
+    text-align: justify;
+    vertical-align: top;
+}
+
+#allinsights { 
+  height: 104px; 
+  width: 104px; 
+  position: fixed; 
+  top: 40%; 
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg); 
+  -o-transform: rotate(-90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+#allinsights a { 
+  display: block; 
+  background: #EAEAF2; 
+  height: 15px; 
+  width: 118px; 
+  padding: 11px 16px;
+  color: #716060; 
+  font-family: PT Serif; 
+  font-size: 14px; 
+  font-weight: normal; 
+  text-decoration: none; 
+  border-bottom: solid 1px #fff;
+  border-left: solid 1px #fff;
+  border-right: solid 1px #fff;
+  border-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+}
+
+#allinsights a:hover { 
+  background: #EAEAF2;
+  color: #000 ; 
+}
+
+@media screen and (max-width: 600px) {
+
+    #allinsights {display:none;}
+
+    .topgridheader {display:block;}
+    .inlinegridheader {display:none;}
+    .insightgrid .button-group .button {float:none;}
+
+}
+
+
+</style>
+<link rel="stylesheet" href="{{ site.url }}/assets/css/element.css">
 </head>
 
-<body class="post">
+<body class="post" >
+
+<div id="allinsights" display="None ">
+  <img align="left" style="display:inline; margin-right:6px; margin-left:7px; margin-top:7px;" height="20" widht="20" src="https://pbs.twimg.com/profile_images/1539659203/bulbsmall_400x400.PNG">
+  <a href="#insightgrid">Related Insights</a>
+</div>
+
+
+<div id="fullpage">
+<div class="section">
+
+
 
 {% include _browser-upgrade.html %}
 
@@ -29,38 +121,91 @@
 {% endif %}
 
 <div id="main" role="main">
-  <div class="article-author-side">
+<div id="index" style="width:90%; margin-left:5%; margin-top:">
+      
+
+  <div class="article-author-side" style="display:none;">
     {% include _author-bio.html %}
   </div>
-  <article class="post">
 
-  {% include _introduction.html %}
+{% include _introduction.html %}
 
-    <div class="headline-wrap">
-      {% if page.link %}
-        <h1><a href="{{ page.link }}">{{ page.title }}</a></h1>
-      {% else %}
-        <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
-      {% endif %}
-    </div><!--/ .headline-wrap -->
-    <div class="article-wrap">
-      {{ content }}
-      <hr />
-      <footer role="contentinfo">
-        {% if page.share != false %}{% include _social-share.html %}{% endif %}
-        <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
-      </footer>
-    </div><!-- /.article-wrap -->
-  {% if site.owner.disqus-shortname and page.comments == true %}
-    <section id="disqus_thread"></section><!-- /#disqus_thread -->
-  {% endif %}
-  </article>
+<article>
+
+        <br>
+        <div id="contain">
+        <div id="plot">
+        <figure>
+          <img src="{{ site.url }}/images/{{ page.plot }}" height="550px" width="550px">
+        </figure>
+        </div><div id="para">
+
+
+        <h2><a href="{{ site.url }}{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h2>
+        
+        <div style="font-size:80%; font-style:italic;">Published on: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></div>
+
+
+        <br>
+
+        <p>{{ page.content}}
+        <br>
+
+        <br>
+        <a target="_blank" href="#">Comment on this insight</p></a></p>
+        <a target="_blank" href="{{ site.url }}/trial2"> To check all <b><i>Insights</i></b> till now click here</a>
+
+        <div class="social-share">
+            <h4>Share on</h4>
+            <ul>
+              <li>
+                <a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }}" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+              </li>
+            </ul>
+          </div><!-- /.social-share -->
+
+
+
+
+        </div>
+        </div>
+    </article>
+
+
+</div><!-- /#index -->
+
+
+
+
 </div><!-- /#main -->
+
+</div> <!-- section ending -->
+
+<div class="section" style="background-color:#EAEAF2;" >
+<div class="insightgrid">
+<a name="insightgrid"></a>
+{% include _relatedgrid.html %}
+</div>
+
+</div>
+<!-- section ends here -->
+
+
+
+
+
+<div class="section fp-auto-height">
 
 <div class="footer-wrap">
   {% if site.related_posts.size > 0 %}
-  <div class="related-articles">
-  <h4>You might also enjoy <small class="pull-right">(<a href="{{ site.url }}/posts/">View all posts</a>)</small></h4>
+  <div class="related-articles" display="None">
+  <h4>Recent Insights <small class="pull-right">(<a href="{{ site.url }}/posts/">View all posts</a>)</small></h4>
     <ul>
     {% for post in site.related_posts limit:3 %}
       <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
@@ -75,6 +220,9 @@
 </div><!-- /.footer-wrap -->
 
 {% include _scripts.html %}
+</div> <!-- section ends here -->
+
+</div> <!-- full page div ends here -->
 
 </body>
 </html>
