@@ -6,7 +6,7 @@
 
 .insightgrid{
   background: #EAEAF2;
-  padding-top: 1em;
+  padding-top: 0.25em;
   padding-bottom: 1em;
 }
 
@@ -34,7 +34,7 @@
 
 
 
- 
+
 
 .insightgrid .button {
   display: inline-block;
