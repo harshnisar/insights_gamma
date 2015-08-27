@@ -7,7 +7,7 @@
 .insightgrid{
   background: #EAEAF2;
   padding-top: 0.25em;
-  padding-bottom: 1em;
+  padding-bottom: 3.5em;
 }
 
 
@@ -142,8 +142,8 @@
 }
 
 .insightgrid .plot{
-  height: 300px;
-  width: 300px;
+  height: 298px;
+  width: 298px;
 }
 
 .alink{

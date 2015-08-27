@@ -86,6 +86,9 @@
 
 </style>
 <link rel="stylesheet" href="{{ site.url }}/assets/css/element.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/element.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/black.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/black.css">
 </head>
 
 <body class="post" >
@@ -202,23 +205,7 @@
 
 <div class="section fp-auto-height">
 
-<div class="footer-wrap">
-  {% if site.related_posts.size > 0 %}
-  
-  <div class="related-articles" style="display:none;">
-  <h4>Recent Insights <small class="pull-right">(<a href="{{ site.url }}/posts/">View all posts</a>)</small></h4>
-    <ul>
-    {% for post in site.related_posts limit:3 %}
-      <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-    <hr />
-  </div><!-- /.related-articles -->
-  {% endif %}
-  
-
-  {% include _disqus_comments.html %}  
-
+<div class="footer-wrap" style="background-color:black;padding-bottom:0em;">
 
   <footer style="text-align:center;">
     {% include _footer.html %}

@@ -19,9 +19,7 @@
   })();
 </script>
 {% endif %}
-{% if page.comments %}
-  {% include _disqus_comments.html %}
-{% endif %}
+
 
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.css">
   
@@ -158,15 +156,15 @@ $("#allinsights").click(function() {
 $(".front>a").click(function(){
     // alert("hmm");
     $(this).siblings("#imgtitle").toggle();
-    $(this).siblings("#back").toggle();
+    $(this).siblings("#back").slideToggle();
 
     
 });
 
 $(".imgTitle>a").click(function(){
     // alert("hmm2");
-    $(this).parent().toggle();
-    $(this).parent().siblings("#back").toggle();
+    $(this).parent().slideToggle();
+    $(this).parent().siblings("#back").slideToggle();
 
     
 });
