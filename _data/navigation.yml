@@ -3,8 +3,16 @@
 - title: Home
   url: /
 
-- title: Methodology
+- title: Supply
   url: /about/
 
-- title: AM Research
-  url: http://research.aspiringminds.com
+- title: Demand
+  url: /demand/
+
+- title: Labour Market
+  url: /
+
+- title: AMCAT
+  url: http://myamcat.com
+
+

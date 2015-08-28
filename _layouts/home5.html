@@ -84,6 +84,19 @@
     .inlinegridheader {display:none;}
     .insightgrid .button-group .button {float:none;}
 
+    
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    #plot {
+        float:none;
+        margin: 0 auto;
+        width: 100%;
+        }
+
+
 }
 
 </style>
@@ -204,7 +217,13 @@ This is homepage.  Will be using tags.yml -->
 
         <br>
         <a target="_blank" href="{{ site.url }}{{ post.url }}">Comment on this insight</p></a></p>
-        <a target="_blank" href="{{ site.url }}/trial2"> To check all <b><i>Insights</i></b> till now click here</a>
+        <p>
+        Categories:
+        {% for tag in post.tags %}
+        <a href='#insightgrid' onclick="tagclick(this);">{{ tag }} &nbsp;</a>
+        {% endfor %}
+        </p>
+        <br>
 
         <div class="social-share">
             <h4>Share on</h4>
@@ -254,7 +273,7 @@ This is homepage.  Will be using tags.yml -->
 
 <div class="section" style="background-color:#EAEAF2;">
 
-<div class="insightgrid">
+<div class="insightgrid" id="insightgrid">
 <a name="insightgrid"></a>
 {% include _allinsights.html %}
 
