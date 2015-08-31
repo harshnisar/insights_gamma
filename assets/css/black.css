@@ -10,3 +10,8 @@
 .blacktrial:visited {
     color:white;
 }
+
+.blacktrial:active {
+    color:white;
+    text-decoration: underline;
+}

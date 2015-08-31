@@ -220,7 +220,7 @@ This is homepage.  Will be using tags.yml -->
         <p>
         Categories:
         {% for tag in post.tags %}
-        <a href='#insightgrid' onclick="tagclick(this);">{{ tag }} &nbsp;</a>
+        <a href='#insightgrid' onclick="tagclick(this);" style="text-decoration:underline;">{{ tag }}</a>&nbsp;
         {% endfor %}
         </p>
         <br>
