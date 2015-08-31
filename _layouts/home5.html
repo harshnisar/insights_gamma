@@ -216,9 +216,10 @@ This is homepage.  Will be using tags.yml -->
         <br>
 
         <br>
-        <a target="_blank" href="{{ site.url }}{{ post.url }}">Comment on this insight</p></a></p>
+        <a target="_blank" style="text-decoration:underline;" href="{{ site.url }}{{ post.url }}">Comment on this insight</p></a></p>
         <p>
-        Categories:
+        <br>
+        <b>Categories:</b>
         {% for tag in post.tags %}
         <a href='#insightgrid' onclick="tagclick(this);" style="text-decoration:underline;">{{ tag }}</a>&nbsp;
         {% endfor %}
@@ -226,7 +227,7 @@ This is homepage.  Will be using tags.yml -->
         <br>
 
         <div class="social-share">
-            <h4>Share on</h4>
+            <h4>Share this Insight</h4>
             <ul>
               <li>
                 <a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ post.url }}" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>

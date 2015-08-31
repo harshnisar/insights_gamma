@@ -99,7 +99,7 @@ $( function() {
     // use filterFn if matches value
     filterValue = filterFns[ filterValue ] || filterValue;
     $grid.isotope({ filter: filterValue });
-
+    // $(".insightgrid")[0].scrollIntoView();
     try{
       $.fn.fullpage.reBuild();
     }
@@ -160,7 +160,7 @@ $(".front>a").click(function(){
 
     
 });
-
+  
 $(".imgTitle>a").click(function(){
     // alert("hmm2");
     $(this).parent().slideToggle();
@@ -168,6 +168,16 @@ $(".imgTitle>a").click(function(){
 
     
 });
+
+$(".back").click(function(){
+    // alert("hmm");
+    $(this).siblings("#imgtitle").toggle();
+    $(this).slideToggle();
+
+    
+});
+  
+
 
 </script>
 

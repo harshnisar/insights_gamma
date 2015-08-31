@@ -41,7 +41,26 @@
 
 <div id="main" role="main">
   <div class="article-author-side">
-    {% include _author-bio.html %}
+    <div itemscope itemtype="http://schema.org/Person" style="display:none;">
+
+<!--{% if author.avatar contains 'http' %}
+  <img src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo">
+{% else %}
+  <img src="{{ site.url }}/images/{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo">
+{% endif %}
+-->
+  <h3 itemprop="name">{{ author.name }}</h3>
+  <p>{{ author.bio }}</p>
+  
+
+  <a href="/trial2.html"><b>See all <i>Insights</i> at a glance</b><br><br></a>
+
+
+</div>
+
+<br>
+
+
   </div>
   <article class="page">
     <h1>{{ page.title }}</h1>

@@ -1,13 +1,13 @@
-<center>
+ <center>
   <h2 class="topgridheader"> All Insights </h2>
 <div class="button-group filters-button-group" style="max-width:940px">
   <span class="inlinegridheader"> All Insights </span>
-  <button class="button" id="Salary" data-filter=".Salary">Salary</button>
-  <button class="button" id="Designation" data-filter=".Designation">Designation</button>
-  <button class="button" id="Location" data-filter=".Location">Location</button>
-  <button class="button" id="Demo" data-filter=".Demo">Demo</button>
-  <button class="button" id="Field" data-filter=".Field">Field</button>
-  <button class="button is-checked" data-filter="*">Show all</button>
+  <button class="button" id="Salary" data-filter=".Salary"><a href="#insightgrid">Salary</a></button>
+  <button class="button" id="Designation" data-filter=".Designation"><a href="#insightgrid">Designation</a></button>
+  <button class="button" id="Location" data-filter=".Location"><a href="#insightgrid">Location</a></button>
+  <button class="button" id="Demo" data-filter=".Demo"><a href="#insightgrid">Demo</a></button>
+  <button class="button" id="Field" data-filter=".Field"><a href="#insightgrid">Field</a></button>
+  <button class="button is-checked" data-filter="*"><a href="#insightgrid">Show all</a></button>
 </div>
 </center>
 
@@ -22,7 +22,13 @@
    </div>
 
    <div class="back" id="back">
-   <a style="text-decoration:none;" href="{{site.url}}/{{ post.url }}"><p>{{ post.excerpt | strip_html }} <br><br><span style="text-align:center;"> Read more</span></p></a>
+   
+   
+   <a style="text-decoration:none;" href="{{site.url}}/{{ post.url }}"><p>{{ post.excerpt | strip_html }}</p> </a> <br><br><a style="text-decoration:underline;" href="{{site.url}}/{{ post.url }}"><p><span style="text-align:center; text-decoration-color:white;"><u> Read more</u></span></p></a>
+   
+   
+   
+
    </div>
    
    </div>
