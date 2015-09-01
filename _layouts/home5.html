@@ -99,6 +99,35 @@
 
 }
 
+
+#footer {
+
+  width: 100%;
+  margin: auto;
+  }
+  .footerFloat {
+  width: 100%;
+    }
+@media all and (min-width: 950px) {
+    #footer {
+
+        width: 980px;
+        margin: auto;
+    } 
+    .footerFloat {
+  width: 25%;
+  float: left;
+    }
+}
+
+#wrapper {
+  background-color: black;
+  width: 100%;
+    overflow:hidden;
+} 
+
+
+
 </style>
 </head>
 
@@ -281,6 +310,8 @@ This is homepage.  Will be using tags.yml -->
 </div>
 </div><!-- section 2 ending -->
 
+
+{% include footer-col.html %}
 
 <div class="section fp-auto-height">
 
