@@ -4,6 +4,7 @@
 
 .blacktrial:hover {
     color:white;
+    text-decoration: underline;
 }
 
 
@@ -13,5 +14,9 @@
 
 .blacktrial:active {
     color:white;
+    text-decoration: underline;
+}
+
+.activepage{
     text-decoration: underline;
 }
