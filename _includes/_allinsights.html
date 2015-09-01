@@ -13,6 +13,7 @@
 
 <div class="grid">
 {% for post in site.posts %}
+
   <div class="grid-item {{ post.tags | join: " " }}">
    <div id="front" class="front">
    <a class="alink"><img class="plot" src="{{ site.url }}/images/{{ post.plot }}" alt="polaroid" /></a>
@@ -33,5 +34,7 @@
    
    </div>
    </div>
+  
+
   {% endfor %}
 </div>
