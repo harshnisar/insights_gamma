@@ -1,0 +1,53 @@
+<html>
+<head>
+
+<script src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
+
+<style>
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    width:2px;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+
+
+#ontop {
+    position: absolute;
+    /*background-color: #202020;*/
+    /*color: #fff;*/
+    /*top: 25px;*/
+    /*left: 25px;*/
+    /*padding: 20px;*/
+    z-index: 11;
+}
+
+</style>
+
+</head>
+
+<body>
+<!-- <h4>DOWN</h4>
+<h3>UP</h3>
+<h2>UP - Y</h3>
+<h1>side - Y</h1> -->
+<div id="scatter">
+<form name="submit"  id="ontop" action="#" method="post">
+    <label for="one" style="margin-left:45px"><i>Salary Perspective</i></label>
+    <input type="radio" id="salary_view" name="first_item" value="1" />
+
+    <label for="two"><i>Skill Perspective</i></label>
+    <input type="radio" id="skill_view" name="first_item" value="2" />
+</form>
+</div>
+<script src="http://harshnisar.github.io/insights_gamma/viz/scatter_columnar.js"></script>
+</body>
+</html> 
