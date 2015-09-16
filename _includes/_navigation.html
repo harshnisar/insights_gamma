@@ -1,12 +1,12 @@
 
 
 
-<div class="navigation-wrapper" style="border-bottom: 1px solid; padding:0.5em 0 0em; background-color:black;">
-	<div class="site-name" style="margin-top:6px;">
+<div class="navigation-wrapper" style="border-bottom: 1px solid; padding:0.5em 0 0em; background-color:white; padding-bottom:12px; position:relative;">
+	<div class="site-name" style="margin-top:6px; margin-left:3.667%; position:absolute;">
 		<img align="left" style="display:inline; margin-right:10px;margin-top:3px;" height="20" widht="20" src="https://pbs.twimg.com/profile_images/1539659203/bulbsmall_400x400.PNG">
-		<a class="blacktrial" style="font-size:22px" href="{{ site.url }}/">{{ site.title }}</a>
+		<a class="whitetrial" style="font-size:22px; font-weight:600" href="{{ site.url }}/">{{ site.title }}</a>
 	</div><!-- /.site-name -->
-	<div class="top-navigation" style="margin-bottom:0px; margin-top:6px;">
+	<div class="top-navigation" style="margin-bottom:0px; margin-top:6px; width:100%; text-align:center;">
 		<nav role="navigation" id="site-nav" class="nav">
 		    <ul>
 		        {% for link in site.data.navigation %}
@@ -15,11 +15,15 @@
 				        {% else %}
 				        {% assign domain = site.url %}
 				    {% endif %}
-				    <li><a class="blacktrial" style="font-size:22px" href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+				    <li><a class="whitetrial" style="font-size:22px;" href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
 				{% endfor %}
 				<!-- adding the input box to see how it looks -->
-				<!-- <li style="color:white;"> Subscribe: <input type="text" id="id1" name="whatever"  style="margin-top:2px; width:100px; color:white;" /></li> -->
+				<!-- <li style="color:white;"> Subscribe: <input type="text" id="id1" name="whatever"  style="margin-top:2px; width:100px;" /></li> -->
 		    </ul>
 		</nav>
 	</div><!-- /.top-navigation -->
+
+<div class="site-name am-logo" style="margin-top:6px; margin-right:13.667%; position:absolute; right:0; top:0; width:0		">
+<img src="http://www.aspiringminds.com/sites/all/themes/aspiringminds/images/black-logo.png" height="39px">
+</div>
 </div><!-- /.navigation-wrapper -->

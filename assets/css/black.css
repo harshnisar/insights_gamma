@@ -21,3 +21,27 @@
 .activepage{
     text-decoration: underline;
 }
+
+.whitetrial{
+    color:black;
+    font-weight:100;
+}
+
+.whitetrial:hover {
+    color:black;
+    text-decoration: underline;
+}
+
+
+.whitetrial:visited {
+    color:black;
+}
+
+.whitetrial:active {
+    color:black;
+    text-decoration: underline;
+}
+
+.activepage{
+    text-decoration: underline;
+}
