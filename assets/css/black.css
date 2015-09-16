@@ -19,7 +19,8 @@
 }
 
 .activepage{
-    text-decoration: underline;
+    text-decoration: none;
+    color: crimson;
 }
 
 .whitetrial{
@@ -42,6 +43,4 @@
     text-decoration: underline;
 }
 
-.activepage{
-    text-decoration: underline;
-}
+
