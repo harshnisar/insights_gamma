@@ -20,7 +20,7 @@
 
 .activepage{
     text-decoration: none;
-    color: crimson;
+    color: crimson !important;
 }
 
 .whitetrial{
