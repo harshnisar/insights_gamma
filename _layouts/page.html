@@ -11,11 +11,45 @@
   
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>  
+<script type="text/javascript" charset="utf8" src="https://github.com/Semantic-Org/Semantic-UI-CSS/blob/master/components/accordion.min.js"></script>  
 {% include _head.html %}
 <link rel="stylesheet" href="{{ site.url }}/assets/css/element.css">
 <link rel="stylesheet" href="http://localhost:4000/assets/css/element.css">
 <link rel="stylesheet" href="{{ site.url }}/assets/css/black.css">
 <link rel="stylesheet" href="http://localhost:4000/assets/css/black.css">
+
+<link rel="stylesheet" href="https://raw.githubusercontent.com/Semantic-Org/Semantic-UI-CSS/master/components/accordion.min.css">
+
+<style>
+
+#footer {
+
+  width: 100%;
+  margin: auto;
+  }
+  .footerFloat {
+  width: 100%;
+    }
+@media all and (min-width: 950px) {
+    #footer {
+
+        width: 980px;
+        margin: auto;
+    } 
+    .footerFloat {
+  width: 25%;
+  float: left;
+    }
+}
+
+#wrapper {
+  background-color: black;
+  width: 100%;
+    overflow:hidden;
+} 
+
+</style>
+
 </head>
 
 <body class="page">
@@ -76,6 +110,9 @@
     {% endif %}
   </article>
 </div><!-- /#index -->
+
+
+{% include footer-col.html %}
 
 <div class="footer-wrap" style="background-color:black;padding-bottom:0em;">
   <footer>
