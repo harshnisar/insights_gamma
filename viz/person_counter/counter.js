@@ -24,6 +24,9 @@ function title_data(title){
     update_numbers('E', searched.EX);
     update_numbers('ES', searched.ES);
     update_numbers('O', searched.O);
+    update_numbers('ENG', Math.floor(searched.ENG));
+    update_numbers('LA', Math.floor(searched.LA));
+    update_numbers('QA', Math.floor(searched.QA));
 }
 
 
@@ -35,16 +38,24 @@ function update_numbers(id_name, new_val){
         $('#'+id_name).attr("class","negative");
     }
 
-
+    if(id_name!='ENG'&&id_name!='LA'&&id_name!='QA'){
+        $('#'+id_name).numerator( {
+        easing: 'linear', // easing options.
+        duration: 1000, // the length of the animation.
+        delimiter: ',',
+        rounding: 2, // decimal places.
+        toValue: new_val // animate to this value.
+        } )
+        return;
+    }
+    //if here then e, l, q
     $('#'+id_name).numerator( {
-    easing: 'linear', // easing options.
-    duration: 1000, // the length of the animation.
-    delimiter: ',',
-    rounding: 2, // decimal places.
-    toValue: new_val // animate to this value.
-    } )
-
-
+        easing: 'linear', // easing options.
+        duration: 1000, // the length of the animation.
+        delimiter: ',',
+        rounding: 0, // decimal places.
+        toValue: new_val // animate to this value.
+        } )
 
 }
 
