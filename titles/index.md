@@ -20,7 +20,7 @@ Connecting AMCAT scores, demographic and personal information to employment outc
 </div>
 </section><!-- /#table-of-contents -->
 
-##Average skills in different job roles
+<h2>Average skills in different job roles</h2>
 
 <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder fitvidsignore' style='width: 834px; height: 649px;'><noscript><a href='#'><img alt='Scores titles dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;tm&#47;tmp_jdanalysis&#47;Scorestitlesdashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='834' height='649' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='tmp_jdanalysis&#47;Scorestitlesdashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;tm&#47;tmp_jdanalysis&#47;Scorestitlesdashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
 
@@ -57,11 +57,7 @@ Connecting AMCAT scores, demographic and personal information to employment outc
 
 </div>    
 
-
-
-
-
-##Job roles on a skill map
+<h2>Job roles on a skill map</h2>
 
 <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder fitvidsignore' style='width: 834px; height: 649px;'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Oc&#47;Occupationsandtheirworkforces&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='834' height='649' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Occupationsandtheirworkforces&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Oc&#47;Occupationsandtheirworkforces&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
 
@@ -89,7 +85,7 @@ Connecting AMCAT scores, demographic and personal information to employment outc
 </div>    
 
 
-##Predicting Skills in Job roles
+<h2>Predicting Skills in Job roles</h2>
 
 <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder fitvidsignore' style='width: 754px; height: 649px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ResidualsManualOnetReverse&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='754' height='649' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ResidualsManualOnetReverse&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ResidualsManualOnetReverse&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
 <div class="ui styled fluid accordion">
@@ -159,10 +155,7 @@ Connecting AMCAT scores, demographic and personal information to employment outc
 
 <a name='Executive-Summary'></a>
 <br>
-<br>
-<br>
-
-##Executive Summary
+<h2>Executive Summary</h2>
 
 <p>
     <ul>
@@ -174,9 +167,8 @@ Connecting AMCAT scores, demographic and personal information to employment outc
 
 </p>
 
-<br>
-
-##Methodology
+<a name='Methodology'></a>
+<h2>Methodology</h2>
 
 <p>A million undergraduates take AMCAT every year as a way to get job credentials and feedback to improve themselves. Random AMCAT takers were surveyed via email wherein they provided information on the jobs they are in and their corresponding annual salaries. Corresponding independent information about the candidates was recorded at the time of them taking AMCAT. Our analysis focuses on entry level engineering graduates.
 </p>
