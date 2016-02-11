@@ -47,10 +47,10 @@ Connecting AMCAT scores, demographic and personal information to employment outc
         </li>
 
         <li>
-        <b> Domain Knowledge - degree:</b> Teachers and Software Engineers have high scores in their domain of education in college.
+        <b> Domain Knowledge - Degree:</b> Teachers and Software Engineers have high percentile scores in their domain of education in college. Whereas sales professionals and customer service representatives have much lesser percentile scores than the available supply. Note: This analysis is done on engineering data.
         </li>
         <li>
-        <b>Domain Knowledge - job:</b> If we consider basic skills required for each role, all roles have professionals atleast above the available supply. 
+        <b>Domain Knowledge - Job:</b> If we consider basic skills required for each role, all roles have professionals with skills atleast above the available supply. 
         </li>
     </ul>
     </div>
@@ -66,21 +66,21 @@ Connecting AMCAT scores, demographic and personal information to employment outc
 <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder fitvidsignore' style='width: 834px; height: 649px;'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Oc&#47;Occupationsandtheirworkforces&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='834' height='649' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Occupationsandtheirworkforces&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Oc&#47;Occupationsandtheirworkforces&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
 
 <div class="ui styled fluid accordion">
-    <div class="title actnive">
+    <div class="title active">
     <i class="dropdown icon"></i>Highlights</div>
     <div class="content active">
     <ul><li><b>Cognitives:</b> Business Analysts have the highest English, Logical and Quantitative skills, while teaching profressionals have the lowest.</li></ul>
     </div>
     
     <div class="title">
-    <i class="dropdown icon"></i>See more</div>
+    <i class="dropdown icon"></i>See All.</div>
     <div class="content">
     <ul>
-        <li><b>Cognitives:</b> Business Analysts and have the highest English, Logical and Quantitative skills, while teaching profressionals have the lowest.</li>
-        <li><b>Personality</b> Sales professionals are the highest on personality traits such as Extraversion and Agreeableness. People in hardware related jobs are least on these parameters as compared to other jobs.
+        <li><b>Cognitives:</b> Business Analysts and have the highest English, Logical and Quantitative skills, while teaching professionals have the lowest.</li>
+        <li><b>Personality:</b> Sales professionals are the highest on personality traits such as Extraversion, and Agreeableness. Customer Service Representatives are also highly extraverted and open to experience. People in hardware related jobs are least on these parameters as compared to other jobs.
         </li>
         <li>
-        <b>Cognitives v/s Personality:</b>Sales and customer service professionals are highly extraverted but low on Logical Skills as compared to other roles.
+        <b>Cognitives v/s Personality:</b> Sales and customer service professionals are highly extraverted but low on Logical Skills as compared to other roles.
         </li>
         
     </ul>
@@ -92,6 +92,27 @@ Connecting AMCAT scores, demographic and personal information to employment outc
 ##Predicting Skills in Job roles
 
 <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder fitvidsignore' style='width: 754px; height: 649px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ResidualsManualOnetReverse&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='754' height='649' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ResidualsManualOnetReverse&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ResidualsManualOnetReverse&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+<br>
+
+<div class="ui styled fluid accordion">
+    <div class="title active">
+    <i class="dropdown icon"></i>Highlights</div>
+    <div class="content active">
+    <ul><li><b>Observed v/s Predicted: </b>The roles above <i>y=x</i> line are the ones where professionals have skills more than required, while the roles below the lines have professionals with skills less than predicted.</li></ul>
+    </div>
+    
+    <div class="title">
+    <i class="dropdown icon"></i>See all</div>
+    <div class="content">
+    <ul>
+        <li><b>Observed v/s Predicted:</b> The roles above <i>y=x</i> line are the ones where professionals have skills more than required, while the roles below the lines have professionals with skills less than predicted.</li>
+        <li><b>Salary drives talent:</b> Generally speaking, in roles with higher salary we observe professionals have more skills than predicted.</li>
+        <li><b>Cognitives:</b> Business Analysts, on an average, have higher scores in English, Logical and Quantitative Ability than predicted. Whereas, people in hardware related jobs have Logical and Quantitative skills less than as required by their jobs. </li>
+    </ul>
+    </div>
+
+</div>    
+
 <br>
 
 
@@ -155,17 +176,8 @@ Connecting AMCAT scores, demographic and personal information to employment outc
 
 <br>
 
-<a name='Methodology'></a>
-<br>
+##Methodology
 
-<div class="ui styled fluid accordion">
-<div class="title active">
-<i class="dropdown icon"></i>
-Methodology
-</div>
-<div class="content active">
-<p class="transition visible">
+<p>
 A million undergraduates take AMCAT every year as a way to get job credentials and feedback to improve themselves. Random AMCAT takers were surveyed via email wherein they provided information on the dependent variables in this dataset – the jobs they are in and their corresponding annual salaries. Corresponding independent information about the candidates was recorded at the time of them taking AMCAT.
 </p>
-</div>
-</div>
