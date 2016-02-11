@@ -92,8 +92,6 @@ Connecting AMCAT scores, demographic and personal information to employment outc
 ##Predicting Skills in Job roles
 
 <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder fitvidsignore' style='width: 754px; height: 649px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ResidualsManualOnetReverse&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='754' height='649' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ResidualsManualOnetReverse&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ResidualsManualOnetReverse&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
-<br>
-
 <div class="ui styled fluid accordion">
     <div class="title active">
     <i class="dropdown icon"></i>Highlights</div>
@@ -168,16 +166,17 @@ Connecting AMCAT scores, demographic and personal information to employment outc
 
 <p>
     <ul>
+    <li>Professionals in different job roles and industries are analysed on the basis of average skills they possess as measured by standardized assessments.</li>
     <li> Systems Software Developers have the highest median salary ie Rs 3,70,000 whereas SEO Specialists are have the lowest median salary ie Rs 1,20,000.</li>
-    <li> A lot workforces have the skill levels below the median supply point. Hiring in these professions needs to be investigated or it could mean the demand of professionals is much higher than the supply.</li>
-    <li> There a few professions which have professionals more skillful than the job requires and similarly there are professions with supply less skillful than required by the job.</li>
-    </ul>
+    <li>A lot workforces have the skills lesser than what’s available in the supply. Hiring in these job roles needs to be investigated.</li>
+    <li>It’s interesting to see how some roles have professionals with higher scores in cognitives but lower in personality traits and vice-versa. Whereas some roles have professionals with a high score in all skills.</li>
+    <li>There a few job roles which have professionals with more skills than required by the role and similarly there are job roles with supply less skillful than required by the job.</li>
+
 </p>
 
 <br>
 
 ##Methodology
 
-<p>
-A million undergraduates take AMCAT every year as a way to get job credentials and feedback to improve themselves. Random AMCAT takers were surveyed via email wherein they provided information on the dependent variables in this dataset – the jobs they are in and their corresponding annual salaries. Corresponding independent information about the candidates was recorded at the time of them taking AMCAT.
+<p>A million undergraduates take AMCAT every year as a way to get job credentials and feedback to improve themselves. Random AMCAT takers were surveyed via email wherein they provided information on the jobs they are in and their corresponding annual salaries. Corresponding independent information about the candidates was recorded at the time of them taking AMCAT. Our analysis focuses on entry level engineering graduates.
 </p>
