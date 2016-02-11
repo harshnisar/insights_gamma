@@ -164,7 +164,7 @@ Connecting AMCAT scores, demographic and personal information to employment outc
     <li>A lot workforces have the skills lesser than what’s available in the supply. Hiring in these job roles needs to be investigated.</li>
     <li>It’s interesting to see how some roles have professionals with higher scores in cognitives but lower in personality traits and vice-versa. Whereas some roles have professionals with a high score in all skills.</li>
     <li>There a few job roles which have professionals with more skills than required by the role and similarly there are job roles with supply less skillful than required by the job.</li>
-
+    </ul>
 </p>
 
 <a name='Methodology'></a>
