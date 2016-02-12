@@ -3,6 +3,7 @@
 title:            Insights
 locale:           en_US
 url:              http://harshnisar.github.io/insights_gamma 
+# url:              http://localhost:4000 
 
 
 # Jekyll configuration

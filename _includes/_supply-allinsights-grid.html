@@ -1,0 +1,40 @@
+ <center>
+  <h2 class="topgridheader"> All Insights </h2>
+<div class="button-group filters-button-group" style="max-width:940px">
+  <span class="inlinegridheader"> All Insights </span>
+  <button class="button" id="USA" data-filter=".USA"><a href="#insightgrid">United States</a></button>
+  <button class="button" id="Phillipines" data-filter=".Phillipines"><a href="#insightgrid">Phillipines</a></button>
+  <button class="button" id="Malaysia" data-filter=".Malaysia"><a href="#insightgrid">Malaysia</a></button>
+  <button class="button" id="India" data-filter=".India"><a href="#insightgrid">India</a></button>
+  <button class="button" id="Engineering" data-filter=".Engineering"><a href="#insightgrid">Engineering</a></button>
+  <button class="button is-checked" data-filter="*"><a href="#insightgrid">Show all</a></button>
+</div>
+</center>
+
+<div class="grid">
+{% for post in site.categories.supply %}
+
+  <div class="grid-item {{ post.tags | join: " " }}">
+   <div id="front" class="front">
+   <a class="alink"><img class="plot" src="{{ site.url }}/images/{{ post.plot }}" alt="polaroid" /></a>
+   
+   <div class="imgTitle" id="imgtitle">
+   <a class="alink"><p>{{ post.title | strip_html }}</p></a>
+   </div>
+
+   <div class="back" id="back">
+   
+   
+   <a style="text-decoration:none;" href="{{site.url}}/{{ post.url }}"><p>{{ post.excerpt | strip_html }}</p> </a> <br><br><a style="text-decoration:underline;" href="{{site.url}}/{{ post.url }}"><p><span style="text-align:center; text-decoration-color:white;"><u> Read more</u></span></p></a>
+   
+   
+   
+
+   </div>
+   
+   </div>
+   </div>
+  
+
+  {% endfor %}
+</div>  

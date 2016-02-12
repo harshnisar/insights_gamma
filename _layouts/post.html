@@ -5,6 +5,137 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 {% include _head.html %}
+
+
+<style>
+#contain {
+    background-color:#FFF;
+    height:100%;/* no need  */
+    margin:0;
+    padding:0;
+    text-align:center;
+    display: inline-block;
+}
+
+#plot {
+    padding:0;
+    margin:0;
+    width:60%;
+    min-width:350px;   
+    vertical-align:bottom;
+    float: left;
+}
+#para {
+    width:39%;
+    min-width:350px;
+    display:inline-block;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    color:black;
+    text-align: justify;
+    vertical-align: top;
+}
+
+#allinsights { 
+  height: 104px; 
+  width: 104px; 
+  position: fixed; 
+  top: 40%; 
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg); 
+  -o-transform: rotate(-90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+#allinsights a { 
+  display: block; 
+  background: #EAEAF2; 
+  height: 15px; 
+  width: 118px; 
+  padding: 11px 16px;
+  color: #716060; 
+  font-family: PT Serif; 
+  font-size: 14px; 
+  font-weight: normal; 
+  text-decoration: none; 
+  border-bottom: solid 1px #fff;
+  border-left: solid 1px #fff;
+  border-right: solid 1px #fff;
+  border-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+}
+
+#allinsights a:hover { 
+  background: #EAEAF2;
+  color: #000 ; 
+}
+
+@media screen and (max-width: 600px) {
+
+    #allinsights {display:none;}
+
+    .topgridheader {display:block;}
+    .inlinegridheader {display:none;}
+    .insightgrid .button-group .button {float:none;}
+
+    .am-logo{display:none;}
+
+}
+
+#main{
+  width:70%;
+}
+
+@media screen and (max-width: 1000px) {
+    #plot {
+        float:none;
+        margin: 0 auto;
+        width: 100%;
+        }
+    #main{
+      width: 100%;
+    }
+
+}
+
+#footer {
+
+  width: 100%;
+  margin: auto;
+  }
+  .footerFloat {
+  width: 100%;
+    }
+@media all and (min-width: 950px) {
+    #footer {
+
+        width: 980px;
+        margin: auto;
+    } 
+    .footerFloat {
+  width: 25%;
+  float: left;
+    }
+}
+
+#wrapper {
+  background-color: black;
+  width: 100%;
+    overflow:hidden;
+} 
+
+</style>
+
+<link rel="stylesheet" href="{{ site.url }}/assets/css/element.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/element.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/black.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/black.css">
+
+
 </head>
 
 <body class="post">
@@ -30,11 +161,9 @@
 
 <div id="main" role="main">
   <div class="article-author-side">
-    {% include _author-bio.html %}
   </div>
-  <article class="post">
+  <article class="post" style="width:100%;">
 
-  {% include _introduction.html %}
 
     <div class="headline-wrap">
       {% if page.link %}
@@ -57,22 +186,29 @@
   </article>
 </div><!-- /#main -->
 
+
+
+
+<div class="section" style="background-color:#EAEAF2;" >
+<div class="insightgrid">
+<a name="insightgrid"></a>
+{% include _relatedgrid.html %}
+</div>
+
+</div>
+
+{% include footer-col.html %}
+
+<div class="section fp-auto-height">
+
 <div class="footer-wrap">
-  {% if site.related_posts.size > 0 %}
-  <div class="related-articles">
-  <h4>You might also enjoy <small class="pull-right">(<a href="{{ site.url }}/posts/">View all posts</a>)</small></h4>
-    <ul>
-    {% for post in site.related_posts limit:3 %}
-      <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-    <hr />
-  </div><!-- /.related-articles -->
-  {% endif %}
-  <footer>
+  <footer style="text-align:center;">
     {% include _footer.html %}
   </footer>
 </div><!-- /.footer-wrap -->
+
+</div><!-- section fp-auto-height -->
+
 
 {% include _scripts.html %}
 
