@@ -5,7 +5,7 @@ author: billy_rick
 modified:
 excerpt: "An indepth analysis of a campus in phillipines, the results and suggested measures."
 tags: [Phillipines, Campus Analytics]
-plot: supply-1.png
+plot: supply-2.png
 ---
 
 <img src='{{site.url}}/images/supply-1.png'>

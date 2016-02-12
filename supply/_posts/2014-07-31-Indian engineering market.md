@@ -5,7 +5,7 @@ author: billy_rick
 modified:
 excerpt: "A post to test author overrides using a data file."
 tags: [India, Engineering]
-plot: supply-1.png
+plot: supply-2.png
 ---
 
 <img src='{{site.url}}/images/supply-1.png'>
