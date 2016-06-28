@@ -2,7 +2,8 @@
 // var data = [{"x": 50.0, "y": 110.1}, {"x": 20.0, "y": 20.5}, {"x": 30.0, "y": 20.5}, {"x": 40.0, "y": 20.5}];
 var data;
 
-d3.csv("http://harshnisar.github.io/insights_gamma/viz/scatter.csv", function(loaddata) {
+// d3.csv("http://harshnisar.github.io/insights_gamma/viz/scatter.csv", function(loaddata) {
+d3.csv("http://insights.aspiringminds.com/viz/scatter.csv", function(loaddata) {
   loaddata.forEach(function(d) {
     d.x = +d.x;
     d.y = +d.y;
